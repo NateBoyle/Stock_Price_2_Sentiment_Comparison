@@ -8,6 +8,14 @@ This project investigates whether stock news sentiment can be used to predict st
 
 A key discovery was that while Pearson correlations were generally weak, **Savitzky-Golay smoothed time series graphs** revealed meaningful visual patterns between sentiment and returns. The project also explores the "chicken or egg" dynamic — whether news sentiment leads prices or vice versa.
 
+## Dataset
+
+The analysis uses the `defeatbeta/yahoo-finance-data` dataset from Hugging Face. Specifically, the `stock_news.parquet` and `stock_prices.parquet` files were used.
+
+**Dataset Link:** [https://huggingface.co/datasets/defeatbeta/yahoo-finance-data/tree/main/data](https://huggingface.co/datasets/defeatbeta/yahoo-finance-data/tree/main/data)
+
+The data covers a one-year period from March 2025 to March 2026. Analysis was limited to the 10 tickers with the highest volume of news articles.
+
 ## Repository Structure
 
 | File | Description |
@@ -18,7 +26,7 @@ A key discovery was that while Pearson correlations were generally weak, **Savit
 | `Analysis.ipynb` | Explored relationships between sentiment and returns; determined the two main visualization approaches |
 | `Savgol_Graph_Producer.ipynb` | Automated generation of 60 Savitzky-Golay smoothed time series graphs |
 | `ScatterPlot_Producer.ipynb` | Automated generation of 60 scatterplot correlation graphs |
-| `Appendices_Producer.ipynb` | Combined 120 generated graphs into organized appendices |
+| `Appendices_Producer.ipynb` | Combined 120 generated graphs into organized appendix PDFs |
 | `Stock Price 2 Sentiment Comparison - Report.pdf` | Main written report (split into parts due to GitHub file size limits) |
 | `Appendix_A_Savistky_Golay_Graphs_Part1.pdf` / `Part2.pdf` | Full set of Savitzky-Golay time series visualizations |
 | `Appendix_B_Correlation_Analysis.pdf` | Full set of scatterplot correlation visualizations |
